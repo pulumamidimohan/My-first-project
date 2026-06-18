@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .mainhead{
+            height: 70px;
+            /* background-color: rgb(195, 209, 209,0.3); */
+            background-color: rgb(159, 153, 173,0.17);
+            display: flex;
+            /* border-bottom: 2px solid ; */
+            align-items: center;
+            
+        }
+        .mainhead p{
+            font-family: monospace;
+            letter-spacing: 3px;
+            font-size: small;
+            font-weight: bold;
+            position: relative;
+            top: 5px;
+            left: 190px;
+            height: 70px;
+            width: 210px;
+            justify-content: center;
+            place-content: center;
+            background-color: white;
+            padding-left: 18px;
+            color: rgb(1, 1, 37);
+        }
+
+        .mainhead .p:hover{
+            border: 3px solid cyan;
+            /* border-bottom: none; */
+        }
+        
+        
+        .mainhead i{
+            height: 20px;
+            width: 20px;
+            color: black;
+        }
+        .middleicon p{
+            display: inline-block;
+            background-color: none;
+            height: 0px;
+            width: 0px;
+            margin-left: 30px;
+
+        }
+        .sideicon{
+            display: flex;
+        }
+        .sideicon p{
+            height: 0px;
+            width: 0px;
+            align-items: center;
+            gap: 190px;
+            position: relative;
+            left: 720px;
+            top: -2px;
+            margin-left: 50px;
+        }
+        .downhead{
+            display: flex;
+            height: 70px;
+            /* gap: 50px; */
+        }
+        .downhead p:first-child{
+            margin-left: 190px;
+            
+        }
+        .downhead p{
+            margin-left: 60px;
+            position: relative;
+            top: 30px;
+            font-size: 17px;
+            font-weight: medium;
+            color: rgb(151, 149, 149);
+            font-family: sans-serif;
+        }
+        .downhead p:last-child{
+            margin-left: 440px;
+        }
+        .downhead p:hover{
+            color: blue;
+        }
+        .bodypart{
+            display: flex;
+        }
+        .bodypart img{
+            width: 500px;
+            height: 300px;
+            margin-left: 60px;
+            margin-top: 50px;
+            
+        }
+        .bodypart h1,p{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(48, 48, 119);
+            
+
+        }
+        h1,p{
+            margin-left: 160px;
+            
+        }
+        h1{
+            margin-top: 100px;
+            margin-bottom: 40px;
+            font-size: 45px;
+        }
+        p{
+            letter-spacing: 2px;
+            font-size: 20px;
+            line-height: 30px;
+            
+        }
+        .matter p{
+            margin-left: 165px;
+            line-height: 24px;
+        }
+
+        .boxpart{
+            display: grid;
+            background-color: rgb(159, 153, 173,0.25);
+            height: 230px;
+            width: 1050px;
+            margin-left: 150px;
+            border-radius: 10px;
+        }
+        .boxpart input{
+            height: 65px;
+            width: 550px;
+            margin-left: 60px;
+            border-radius: 10px;
+            border: 2px solid rgb(47, 47, 109);
+            justify-content: center;
+            padding-left: 20px;
+        }
+        .boxpart p{
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 60px;
+            margin-top: 45px;
+
+        }
+        #checkbox1{
+            width: 15px;
+            height: 15px;
+            position: relative;
+            top: 55px;
+            left: -610px;
+        }
+        .inputbox div{
+            position: relative;
+            top: 13px;
+            left: 85px;
+        }
+        .inputbox a{
+            color: rgb(10, 10, 100);
+            text-decoration:dotted ;
+            text-decoration-color: rgb(10,10,100);
+            font-weight: bold;
+        }
+        .buttonbox button{
+            width: 300px;
+            height: 65px;
+            background-color: rgb(114, 187, 216);
+            position: relative;
+            left: 490px;
+            top: -85px;
+            border-radius: 10px;
+            padding: 20px;
+            font-size: 15px;
+            font-weight: bold;
+            border: 2px solid rgb(2, 2, 117);
+            /* border-bottom-width:10px ; */
+            box-shadow: 0px 6px rgb(1, 1, 68);
+        }
+        .buttonbox p i {
+            position: relative;
+            top: -65px;
+            left: 40px;
+        }
+        .buttonbox #a1 {
+            position: relative;
+            top: -200px;
+            left: 790px;
+        }
+        .buttonbox #a2 {
+            position: relative;
+            top: -93px;
+            left: 320px;
+        }
+        #a1 {
+            color: rgb(4, 4, 75);
+            
+        }
+        #a2 {
+            color: rgb(4, 4, 75);
+            
+        }
+        .buttonbox button:hover{
+            background-color: rgb(253, 175, 28);
+        }
+        .buttonbox button:active{
+            background-color: cyan;
+        }
+
+        .three_divpart{
+            display: flex;
+            margin-top: 45px;
+            gap: 150px;
+            margin-bottom: 70px;
+            color: rgb(48, 48, 119);
+
+        }
+        
+        .firstdiv img:first-child{
+            margin-left: 140px;
+        }
+        .firstdiv  p{
+            /* margin-left: 190px; */
+            font-size: 16px;
+            margin-left: 150px;
+            margin-top: 15px;
+            line-height: 21px;
+            color:rgb(48, 48, 119);
+        }
+        .seconddiv{
+            margin-left: -100px;
+        }
+        .seconddiv h2,p{
+            margin-left: 0px;
+            font-size: 16px;
+            margin-top: 20px;
+            line-height: 21px;
+            color:rgb(48, 48, 119);
+        }
+        .seconddiv h2{
+            font-size: 23px;
+            margin-top: 5px;
+        }
+
+        .threediv{
+            margin-left: -120px;
+        }
+        .firstdiv h2{
+            margin-left: 150px;
+        }
+        .firstdiv p:first-child{
+            margin-left: 140px;
+            margin-top: 40px;
+        }
+        .body-section {
+            height: 270px;
+            background-color: rgb(159, 153, 173,0.17);
+        }
+        .heading {
+            font-size: 30px;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: rgb(48, 48, 119);
+        }
+        .para {
+            font-size: medium;
+            color: rgb(48, 48, 119);
+            font-family: sans-serif;
+        }
+        .body-section{
+            display: flex;
+        }
+        .heading,.content{
+            margin-left: 150px;
+        }
+        .body-section p{
+            font-weight: 100;
+        }
+        .heading{
+            margin-top: 80px;
+        }
+        .content{
+            display: flex;
+            gap: 0px;
+            height: 400px;
+            width: 600px;
+            margin-left: 0px;
+        }
+        .content button{
+            width: 220px;
+            height: 60px;
+            border-radius: 10px;
+            border: 2px solid rgb(48, 48, 119);
+            margin-top: 120px;
+            margin-right: 15px;
+            margin-left: 20px;
+            font-size: 15px;
+            color:rgb(48, 48, 119) ;
+            font-weight: bold;
+            letter-spacing: 0px;
+            
+        }
+        .content button:hover{
+            background-color:rgba(48, 48, 119,0.3) ;
+        }
+        .boxes{
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            background-color: rgb(159, 153, 173,0.17) ;
+            border-radius: 10px;
+            height: 450px;
+
+        }
+        .boxes p{
+            justify-content: center;
+            align-content: center;
+            
+        }
+        .box1 p{
+            position:  relative;
+            bottom: 0px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: orange;
+            height: 180px;
+
+        }
+        .box2 p{
+            position:  relative;
+            bottom: 0px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: rgb(100, 184, 218);
+            height: 180px;
+        }
+        .box3 p{
+            position:  relative;
+            bottom: 0px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: rgb(41, 219, 219);
+            height: 180px;
+        }
+
+        
+        .box1,.box2,.box3 {
+            height: 380px;
+            width: 340px;
+            background-color: grey;
+            background-color: white;
+            margin-top: 50px;
+            align-content: center;
+            border-radius: 10px;
+            /* box-shadow: 0 20px ; */
+            
+        }
+        .box1{
+            margin-left: 150px;
+            position: relative;
+            bottom: 0px;
+            box-shadow: 0px 8px rgb(252, 164, 1);
+        }
+        .box2 {
+            box-shadow: 0px 8px rgb(0, 0, 255);
+        }
+        .box3{
+            margin-right: 115px;
+            box-shadow: 0px 8px rgb(252, 164, 1);
+        }
+        .box1:hover{
+            border: 2px solid orange;
+        }
+        .box2:hover{
+            border: 2px solid blue;
+        }
+        .box3:hover{
+            border: 2px solid cyan;
+        }
+        .h1 {
+            background-color: orange;
+        }
+        .h2 {
+            background-color: rgb(100, 184, 218);
+        }
+        .h3 {
+            background-color: rgb(41, 219, 219);
+        }
+        .box1 p{
+            padding: 15px;
+            background-color: rgb(252, 164, 2,0.8);
+        }
+        .box2 p{
+            padding: 15px;
+            background-color: rgb(0, 0, 255,0.6);
+        }
+        .box3 p{
+            padding: 30px;
+            padding-bottom: 10px;
+            position: relative;
+            /* top: 10px; */
+            background-color:  rgb(5, 252, 252,0.8);
+        }
+        .box1 img{
+            position: relative;
+            top: 60px;
+            left: 130px;
+        }
+        .box2 img{
+            position: relative;
+            top: 60px;
+            left: 130px;
+        }
+        .box3 img{
+            position: relative;
+            top: 60px;
+            left: 130px;
+        }
+        .box1 h3{
+            position: relative;
+            top: 70px;
+            left: 10px;
+            z-index: 6;
+            /* color: rgb(3, 3, 53); */
+            color: rgb(1, 1, 77);
+            font-size: 20px;
+        }
+        .box2 h3{
+            position: relative;
+            top: 70px;
+            left: 10px;
+            z-index: 4;
+            font-size: 20px;
+            /* color: rgb(3, 3, 53); */
+            color: rgb(1, 1, 77);
+        }
+        .box3 h3{
+            position: relative;
+            top: 70px;
+            left: 10px;
+            z-index: 4;
+            color: rgb(1, 1, 77);
+            font-size: 20px;
+            padding-left: 20px;
+        }
+
+        /* second boxes section */
+
+        .boxesss{
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            background-color: rgb(159, 153, 173,0.17) ;
+            border-radius: 10px;
+            height: 500px;
+
+        }
+        .boxesss p{
+            justify-content: center;
+            align-content: center;
+            
+        }
+        .box1ss p{
+            position:  relative;
+            bottom: 0px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: orange;
+            height: 180px;
+
+        }
+        .box2ss p{
+            position:  relative;
+            bottom: 0px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: rgb(100, 184, 218);
+            height: 180px;
+        }
+        .box3ss p{
+            position:  relative;
+            bottom: 0px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: rgb(41, 219, 219);
+            height: 180px;
+        }
+
+        
+        .box1ss,.box2ss,.box3ss {
+            height: 380px;
+            width: 340px;
+            background-color: grey;
+            background-color: white;
+            margin-top: 50px;
+            align-content: center;
+            border-radius: 10px;
+            /* box-shadow: 0 20px ; */
+            
+        }
+        .box1ss{
+            margin-left: 150px;
+            position: relative;
+            bottom: 0px;
+            box-shadow: 0px 8px rgb(252, 164, 1);
+        }
+        .box2ss {
+            box-shadow: 0px 8px rgb(0, 0, 255);
+        }
+        .box3ss{
+            margin-right: 115px;
+            box-shadow: 0px 8px rgb(252, 164, 1);
+        }
+        .box1ss:hover{
+            border: 2px solid violet;
+        }
+        .box2ss:hover{
+            border: 2px solid rgb(230, 24, 230);
+        }
+        .box3ss:hover{
+            border: 2px solid red;
+        }
+        .h1 {
+            background-color: orange;
+        }
+        .h2 {
+            background-color: rgb(100, 184, 218);
+        }
+        .h3 {
+            background-color: rgb(41, 219, 219);
+        }
+        .box1ss p{
+            padding: 15px;
+            background-color: rgb(238, 130, 238,0.8);
+        }
+        .box2ss p{
+            padding: 15px;
+            background-color: rgb(128, 0, 128,0.55);
+        }
+        .box3ss p{
+            padding: 30px;
+            padding-bottom: 10px;
+            position: relative;
+            /* top: 10px; */
+            background-color:  rgb(255, 0, 0,0.6);
+        }
+        .box1ss img{
+            position: relative;
+            top: 60px;
+            left: 130px;
+        }
+        .box2ss img{
+            position: relative;
+            top: 60px;
+            left: 130px;
+        }
+        .box3ss img{
+            position: relative;
+            top: 60px;
+            left: 130px;
+        }
+        .box1ss h3{
+            position: relative;
+            top: 70px;
+            left: 10px;
+            z-index: 6;
+            /* color: rgb(3, 3, 53); */
+            color: rgb(1, 1, 77);
+            font-size: 20px;
+        }
+        .box2ss h3{
+            position: relative;
+            top: 70px;
+            left: 10px;
+            z-index: 4;
+            font-size: 20px;
+            /* color: rgb(3, 3, 53); */
+            color: rgb(1, 1, 77);
+        }
+        .box3ss h3{
+            position: relative;
+            top: 70px;
+            left: 10px;
+            z-index: 4;
+            color: rgb(1, 1, 77);
+            font-size: 20px;
+            padding-left: 20px;
+        }
+        .h2div{
+            color:rgb(1, 1, 77) ;
+            margin-left: 150px;
+            
+        }
+        .panda {
+            background-color: rgb(159, 153, 173,0.17);
+            height: 390px;
+            /* display: flex;
+            flex-direction: row; */
+
+        }
+        .buttonboxes {
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .buttonboxes button:hover{
+            border: 2px solid cyan;
+            box-shadow: 0px 4px cyan;
+        }
+
+        .kinnu {
+            height: 350px;
+            width: 450px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 40px;
+            margin-left: 150px;
+
+            /* background-color: yellow; */
+        }
+        .jabille{
+            height: 350px;
+            width: 450px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 40px;
+            /* background-color: yellow; */
+        }
+        .akhil {
+            height: 350px;
+            width: 450px;
+            display: flex;
+            flex-direction: column;
+            margin-right: 100px;
+            gap: 30px;
+            margin-top: 40px;
+            
+        }
+        button {
+            height: 60px;
+            width: 300px;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: sans-serif;
+            color:rgb(1, 1, 77);
+            border-radius: 10px;
+            background-color: white;
+            border: none;
+            box-shadow: 0px 4px rgb(177, 176, 176);
+        }
+
+        footer {
+    margin-top: 0px;
+}
+/* .foot-panel1 {
+    background-color: #37475a;
+    color: white;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.78em;
+} */
+.foot-panel2 {
+    /* background-color: #222f3d; */
+    background-color: rgb(3, 3, 56);
+    color: white;
+    height: 275px;
+    display: flex;
+    justify-content: space-evenly;
+}
+ul{
+    margin-top: 20px;
+}
+ul a{
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 15px;
+    color: #dddddd;
+}
+/* .foot-panel3 {
+    background-color: #222f3d;
+    color:white;
+    border-top:0.5px solid white;
+    height: 75px;
+    border-bottom:0.5px solid white;
+} */
+/* .logo2 {
+    background-image: url("/home/user/Downloads/logo.png");
+    background-size: cover;
+    height: 50px;
+    width:100px;
+    margin-top: 15px;
+    margin-left: 45%;
+} */
+.foot-panel4 {
+    color: white;
+    background-color: rgb(3, 3, 56);
+    height: 80px;
+    font-size: 0.7rem;
+    text-align:center;
+}
+.pages {
+    padding-top: 25px;
+}
+.copyright {
+    padding-top: 5px;
+}
+footer .divsss{
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(3, 3, 56);
+    color: white;
+    letter-spacing: 0.4px;
+    align-items: center;
+    /* margin-left: 200px; */
+    
+}
+footer .divsss p{
+    margin-left: 270px;
+    color: white;
+    justify-content: center;
+    align-self: center;
+}
+footer p{
+    color: white;
+    
+}
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head1">
+            <div class="mainhead">
+                
+                <p class="p"> <i class='fa-solid fa-magnifying-glass' id="optional-id"> </i> FONT AWESOME</p>
+                <div class="middleicon">
+                <p><i class='fa-solid fa-magnifying-glass' id="optional-id"> </i></p>
+                <p><i class='fa-solid fa-magnifying-glass' id="optional-id"> </i></p>
+                </div>
+                <div class="sideicon">
+                    <p><i class='fa-solid fa-magnifying-glass' id="optional-id"> </i></p>
+                <p><i class='fa-solid fa-magnifying-glass' id="optional-id"> </i></p>
+                </div>
+            </div>
+            <div class="downhead">
+                <p>Start</p>
+                <p><i class='fa-solid fa-magnifying-glass' id="optional-id"> </i></p>
+                <p>Icons</p>
+                <p>Docs</p>
+                <p>Plans</p>
+                <p>Support</p>
+                <p><i class='fa-solid fa-magnifying-glass' id="optional-id"> </i></p>
+            </div>
+        </header>
+            <div class="bodypart">
+                <div class="matter">
+                    <h1>Get Started with Font Awesome</h1>
+                    <p>The easiest way to get icons on your website is with a kit.It's <br>your own custom version of font awesome .All bundled<br> up only with icons,tools,and settings you need</p>
+                </div>
+                <div class="diagram">
+                    <img src="/home/user/Pictures/Screenshots/Screenshot from 2026-06-15 14-03-28.png" alt="#">
+                </div>
+            </div>
+        
+            <div class="boxpart">
+                <div class="inputbox">
+                    <p>Enter your Email to get satrted with a free kit ?</p><br>
+                    <input type="text" name="name" id="input" placeholder="e.g.violet@freshsqueezed.org">
+                    <input type="checkbox" id="checkbox1"><div>I agree to the <a href="#">terms of service</a> and <a href="#">privacy policy</a>.</div>
+
+                </div>
+                <div class="buttonbox">
+                    <a id="a1">Powered by Cloudflare &nbsp; <i class='fa-solid fa-magnifying-glass' id="optional-id"> </i></a>
+                    <button>Start for free <p><i class='fa-solid fa-magnifying-glass' id="optional-id"> </i></p></button>
+                    <a id="a2">Already have an account?</a>
+                </div>
+            </div>
+
+            <div class="three_divpart">
+                <div class="firstdiv">
+                    <img src="/home/user/Pictures/Screenshots/Screenshot from 2026-06-15 20-41-51.png" alt="#">
+                    <h2>Set up font Awesome</h2>
+                    <p>After creating a kit,copy your kit's unique <br> code in to the <a href="#">  of your page.</a> </p>
+                </div>
+                <div class="seconddiv">
+                    <img src="/home/user/Pictures/Screenshots/Screenshot from 2026-06-15 20-42-09.png" alt="#">
+                    <h2>Add Icons</h2>
+                    <p>Start placing icons in yout HTML's <br> using your <a href="#">simple syntax.</a></p>
+                </div>
+                <div class="threediv">
+                    <img src="/home/user/Pictures/Screenshots/Screenshot from 2026-06-15 20-42-19.png" alt="#">
+                    <h2>Make it Awesome</h2>
+                    <p>It's time to rock and roll!. <a href="#">color,size,rotate,<br>animate & power transform</a> icons with ease!</p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    
+        <div class="body-section">
+            <div class="heading">Other ways to use<br>
+            <p>No matter what tech you're using for your project, website, or app,we<br> have the tools that work how and where you do.</p></div>
+            
+            <div class="content">
+                
+                <button id="b1">Explain Icons &nbsp; <i class='fa-solid fa-magnifying-glass' id="optional-id"> </i></button>
+                <button id="b2">Download &nbsp; <i class='fa-solid fa-magnifying-glass' id="optional-id"> </i></button>
+            </div>
+        </div>
+            <!-- boxxy... -->
+        <div class="boxes">
+            <div class="box1">
+                <div class="img1"> <img src="/home/user/Pictures/Screenshots/Screenshot from 2026-06-15 23-45-58.png" alt="#"></div><br><br><br><br>
+                <div class="p1"><h3>Getting started</h3><br>
+                <p>If your'e new to Font Awesome,or just  need a refresher.here are some tips to get started..</p></div>
+            </div>
+            <div class="box2">
+                <div class="img2"> <img src="/home/user/Pictures/Screenshots/Screenshot from 2026-06-15 23-46-07.png" alt="#"></div><br><br><br><br>
+                <div class="p2"><h3>On websites</h3><br>
+                <p>You can add icons to your web projects with a little bit of code- its super easy once you have a few of the basics under your belt.</p></div>
+            </div>
+            <div class="box3">
+                <div class="img3"> <img src="/home/user/Pictures/Screenshots/Screenshot from 2026-06-15 23-46-17.png" alt="#"></div><br><br><br><br>
+                <div class="p3"><h3>In Desktop Apps</h3><br>
+                <p>Use icons in desktop design programs  like figma and illustrator,or craft nicelooking docs or slides-we've got you<br>covered.</p></div>
+            </div>
+        </div>
+
+
+
+
+        <div class="boxesss">
+            <div class="box1ss">
+                <div class="img1ss"> <img src="/home/user/Pictures/Screenshots/Screenshot from 2026-06-16 01-09-30.png" alt="#"></div><br><br><br><br>
+                <div class="p1ss"><h3>Getting started</h3><br>
+                <p>If your'e new to Font Awesome,or just  need a refresher.here are some tips to get started..</p></div>
+            </div>
+            <div class="box2ss">
+                <div class="img2ss"> <img src="/home/user/Pictures/Screenshots/Screenshot from 2026-06-16 01-09-44.png" alt="#"></div><br><br><br><br>
+                <div class="p2ss"><h3>On websites</h3><br>
+                <p>You can add icons to your web projects with a little bit of code- its super easy once you have a few of the basics under your belt.</p></div>
+            </div>
+            <div class="box3ss">
+                <div class="img3ss"> <img src="/home/user/Pictures/Screenshots/Screenshot from 2026-06-16 01-09-53.png" alt="#"></div><br><br><br><br>
+                <div class="p3ss"><h3>In Desktop Apps</h3><br>
+                <p>Use icons in desktop design programs  like figma and illustrator,or craft nicelooking docs or slides-we've got you<br>covered.</p></div>
+            </div>
+        </div>
+        
+        <div class="panda">
+        <div class="h2div"><h2>Use Font Awesome with your preferred syntax or stack..</h2></div>
+        <div class="buttonboxes">
+            <div class="kinnu">
+            <button>Vue.js</button>
+            <button>React</button>
+            <button>Amber</button>
+            </div>
+            <div class="jabille">
+            <button>Angular</button>
+            <button>Square Space</button>
+            </div>
+            <div class="akhil">
+            <button>Scss</button>
+            <button>Word press</button>
+            </div>
+        </div>
+        </div>
+
+
+        <footer>
+        <!-- <div class="foot-panel1">
+            Bact To Top
+        </div> -->
+        <div class="divsss"><p>Special thanks to kiranmai,jabilli and akhil gaaru cause they made a crucial role for this website..<br>
+        ..................................my mom gives more encouragement to made this website............................</p></div>
+        <div class="foot-panel2">
+            <ul>
+                <p>Get To Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Get To Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Get To Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Get To Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+        </div>
+        <!-- <div class="foot-panel3">
+            <div class="logo2"></div>
+        </div> -->
+        <div class="foot-panel4">
+            <div class="pages">
+                <a>Conditions of Use</a>
+                <a>Privacy Notice</a>
+                <a>Your Ads Privacy Choices</a>
+            </div>
+            <div class="copyright">
+                @22346-eubfewu fiyqikdb qiwglbwfS
+            </div>
+        </div>
+
+        </footer>
+    
+</body>
+</html>
+
+
